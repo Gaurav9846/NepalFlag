@@ -1,0 +1,126 @@
+#flag{
+    width:300px;
+    margin:40px auto;
+    position: relative;
+}
+/*-------------blue border-------------*/
+.outertriangleup{
+    position: relative;
+    z-index: 0;
+    width: 0px;
+    height: 0px;
+    border-right: 290px solid transparent;
+    border-bottom: 270px solid blue;
+}
+.outertriangledown{
+    position: relative;
+    z-index: 2;
+    width: 88px;
+    height: 0px;
+    border-right: 201px solid transparent;
+    border-bottom: 248px solid blue;
+}
+
+/*-------------red border------------*/
+.innertriangleup{
+    z-index: 0;
+    position: relative;
+    bottom: -30px;
+    width: 0px;
+    left: 12px;
+    height: 0px;
+    border-right: 249px solid transparent;
+    border-bottom: 228px solid red;
+}
+
+.innertriangledown{
+    z-index: 1;
+    position: relative;
+    bottom: 11px;
+    width: 51px;
+    left: 12px;
+    height: -35px;
+    border-right: 202px solid transparent;
+    border-bottom: 249px solid red;
+}
+
+/*---------Moon------------*/
+#moon{
+    position: absolute;
+    left: 53px;
+    top: 140px;
+    z-index: 11;
+    }
+    .shape{
+    background: #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 58px;            /*this section for making circle*/
+    position: relative;
+
+    }
+    .shape:after{
+        background: red;
+        border-radius: 161px;
+        content: "";
+        height: 60px;
+        left: 2px;                  /*this section for overlapping small circle in the main circle*/
+        position: absolute;
+        top: -1px;
+        width: 66px;
+    }
+
+/*--------Star of Moon-----------*/
+    .star{
+        background: #fff;
+        height: 39px;
+        left: 15px;
+        position: absolute;
+        top: 19px;
+        width: 39px;
+        z-index: 10;
+        }
+        .star:before {
+        height: 39px;
+        width: 39px;
+        background: #fff;
+        content:"";
+        position: absolute;
+        transform: rotate(30deg);
+        }
+        .star:after {
+        height: 39px;
+        width: 39px;
+        background: #fff;
+        content:"";
+        position: absolute;
+        transform: rotate(-30deg);
+        }
+    
+ /*----------Sun--------------*/
+        #sun{
+        background: #fff;
+        height: 58px;
+        left: 56px;
+        position: absolute;
+        top: 374px;
+        width: 58px;
+        z-index: 2;
+        }
+        #sun:before {
+        height: 58px;
+        width: 58px;
+        background: #fff;
+        content:"";
+        position: absolute;
+    
+        transform: rotate(30deg);
+        }
+        #sun:after {
+        height: 58px;
+        width: 58px;
+        background: #fff;
+        content:"";
+        position: absolute;
+        transform: rotate(-30deg);
+        }
